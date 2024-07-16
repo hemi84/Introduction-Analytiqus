@@ -14,20 +14,30 @@
         .header {
             background-color: #343a40;
             color: white;
-            padding: 40px 0;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            max-width: 150px;
+        }
+        .header-content {
+	    margin: 0 auto;
             text-align: center;
         }
-        .header h1 {
+        .header-content h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 2.5em;
         }
-        .header p {
+        .header-content p {
             font-size: 1.2em;
         }
         .container {
             margin-top: 30px;
         }
-        .features, .details, .video-placeholder {
+        .details, .features, .section {
             margin-bottom: 40px;
         }
         .features ul {
@@ -42,15 +52,37 @@
             margin-bottom: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .video-placeholder {
+        .section {
             background: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
         }
-        .video-placeholder h2 {
+        .section h2 {
             margin-top: 0;
+            font-size: 1.5em;
+            color: #5f4dee;
+        }
+        .section .text-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .section .video-placeholder {
+            flex: 0 0 40%;
+            max-width: 40%;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .section .video-placeholder video {
+            width: 100%;
+            height: auto;
         }
         footer {
             background-color: #343a40;
@@ -58,40 +90,219 @@
             text-align: center;
             padding: 10px 0;
         }
+	.btn-custom {
+            background: linear-gradient(45deg, #5f4dee, #4a3bbf);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .btn-custom:hover {
+            background: linear-gradient(45deg, #4a3bbf, #5f4dee);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        .btn-custom:active {
+            background: linear-gradient(45deg, #5f4dee, #4a3bbf);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transform: translateY(0);
+        }
+	.about-analytiqus {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+        .about-analytiqus h2 {
+            margin-top: 0;
+            font-size: 2em;
+            color: #1c1c1c;
+        }
+        .about-analytiqus p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+	.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    margin-bottom: 15px; /* Space between list items */
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    margin-right: 15px; /* Space between the image and text */
+}
+
+.feature-text {
+    flex: 1; /* Allows the text to take up remaining space */
+}
+
+.feature-text strong {
+    display: block; /* Ensures the strong text is on its own line */
+    margin-bottom: 5px; /* Space below the strong text */
+}
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>Welcome to Analytiqus</h1>
-        <p>Your powerful new desktop business analytics software designed to transform how organizations leverage data for strategic decision-making.</p>
+        <img src="img/logo.png" alt="Analytiqus Logo" class="logo">
+        <div class="header-content">
+            <h1>Welcome to Analytiqus</h1>
+            <p>Your Comprehensive Desktop Solution for Advanced Data Analytics</p>
+        </div>
     </div>
 
     <div class="container">
-        <div class="details">
+        <div class="about-analytiqus">
             <h2>About Analytiqus</h2>
-            <p>Analytiqus is an advanced desktop software solution tailored to meet the needs of modern businesses. It provides a comprehensive suite of tools designed to help organizations make data-driven decisions with confidence. Whether you're a data analyst, business strategist, or operations manager, Analytiqus offers the features you need to extract valuable insights from your data.</p>
-            <p>With Analytiqus, you can visualize complex datasets, predict future trends, evaluate multiple scenarios, and optimize your business processes. Our software is built to be intuitive yet powerful, ensuring you have the flexibility to tackle any analytics challenge.</p>
+    <p>Analytiqus is a state-of-the-art desktop software solution meticulously crafted to address the dynamic needs of modern businesses. It offers a comprehensive suite of tools designed to empower organizations to make informed, data-driven decisions with confidence. Whether you're a data analyst striving for actionable insights, a business strategist seeking strategic advantage, or an operations manager optimizing processes, Analytiqus provides all the essential features to transform your data into valuable business intelligence.</p>
+    <p>With Analytiqus, you gain the ability to visualize complex datasets through interactive and customizable charts, forecast future trends using sophisticated predictive modeling techniques, and evaluate various scenarios to understand potential outcomes. Our platform supports advanced optimization tools to fine-tune your business processes and enhance operational efficiency. Analytiqus combines intuitive design with powerful functionality, ensuring that you can navigate any analytics challenge effortlessly and unlock the full potential of your data.</p>
+    <p>Our software is designed to be versatile and scalable, adapting to the needs of businesses of all sizes and industries. From handling vast amounts of data to applying advanced machine learning algorithms, Analytiqus is your ultimate partner in achieving data excellence and driving business growth.</p>
+        </div>
+	<div class="text-center">
+            <a href="google_form.html" class="btn-custom">Request a Quote</a>
+        </div>
+<div class="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>
+            <div class="feature-item">
+                <img src="img/viz.png" alt="Visualization Icon" class="feature-icon">
+                <div class="feature-text">
+                    <strong>Advanced Data Visualizations:</strong>
+                    Create compelling and interactive visual representations of your data with Analytiqus. Utilize a wide range of customizable chart types, including bar charts, line graphs, scatter plots, and heatmaps. These visualizations help you uncover patterns, identify trends, and present complex datasets in an intuitive manner, making it easier for stakeholders to grasp and act on insights.
+                </div>
+            </div>
+        </li>
+<li>
+    <div class="feature-item">
+        <img src="img/fe.png" alt="Feature Engineering Icon" class="feature-icon">
+        <div class="feature-text">
+            <strong>Feature Engineering:</strong>
+            Transform raw data into meaningful features that enhance the performance of machine learning models. Analytiqus offers robust tools for feature extraction, selection, and transformation, allowing you to create new features, handle missing values, and encode categorical variables effectively. This process helps to improve the accuracy and efficiency of your models by providing them with the most relevant and useful information.
+        </div>
+    </div>
+</li>
+<li>
+            <div class="feature-item">
+                <img src="img/ml.png" alt="Machine Learning Icon" class="feature-icon">
+                <div class="feature-text">
+                    <strong>Machine Learning:</strong>
+                    Utilize powerful machine learning algorithms such as Linear/Logistic Regression, Decision Tree, Random Forest, SVM, Gradient Boosting, and Neural Networks. These algorithms enable you to perform complex analyses, uncover hidden patterns, and automate insights, leading to more accurate predictions and better decision-making.
+                </div>
+            </div>
+        </li>
+<li>
+    <div class="feature-item">
+        <img src="img/pm.png" alt="Predictive Modeling Icon" class="feature-icon">
+        <div class="feature-text">
+            <strong>Predictive Modeling:</strong>
+            Harness machine learning algorithms to forecast trends and make data-driven predictions. By applying advanced techniques such as regression, classification, and time series analysis, Analytiqus enables you to anticipate future outcomes and make strategic decisions based on predictive insights.
+        </div>
+    </div>
+</li>
+<li>
+            <div class="feature-item">
+                <img src="img/wif.png" alt="What-If Analysis Icon" class="feature-icon">
+                <div class="feature-text">
+                    <strong>What-If Analysis:</strong>
+                    Simulate hypothetical scenarios to visualize the impact of different decisions before implementation. This feature allows you to explore various possibilities and assess their potential outcomes, aiding in strategic planning and decision-making.
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="feature-item">
+                <img src="img/op.png" alt="Optimization Tools Icon" class="feature-icon">
+                <div class="feature-text">
+                    <strong>Optimization Tools:</strong>
+                    Optimize processes, resources, and strategies using advanced analytics and mathematical modeling. Analytiqus provides tools for identifying the most efficient solutions and making data-driven decisions to enhance operational efficiency and effectiveness.
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="feature-item">
+                <img src="img/sa.png" alt="Scenario Analysis Icon" class="feature-icon">
+                <div class="feature-text">
+                    <strong>Scenario Analysis:</strong>
+                    Evaluate multiple scenarios to understand potential outcomes and mitigate risks effectively. With Analytiqus, you can simulate various scenarios and visualize their impacts, helping you to make well-informed decisions based on potential future events and conditions.
+                </div>
+            </div>
+        </li>
+
+       </ul>
         </div>
 
         <div class="features">
-            <h2>Key Features</h2>
-            <ul>
-                <li><strong>🔍 Advanced Data Visualizations:</strong> Create interactive and customizable charts using state-of-the-art visualization libraries.</li>
-                <li><strong>📈 Predictive Modeling:</strong> Harness machine learning algorithms to forecast trends and make data-driven predictions.</li>
-                <li><strong>🔄 Scenario Analysis:</strong> Evaluate multiple scenarios to understand potential outcomes and mitigate risks effectively.</li>
-                <li><strong>🔮 What-If Analysis:</strong> Simulate hypothetical scenarios to visualize the impact of different decisions before implementation.</li>
-                <li><strong>⚙️ Optimization Tools:</strong> Optimize processes, resources, and strategies using advanced analytics and mathematical modeling.</li>
-                <li><strong>🧠 Machine Learning:</strong> Utilize powerful machine learning algorithms such as Linear/Logistic Regression, Decision Tree, Random Forest, SVM, Gradient Boost, and Neural Networks for automated insights and predictive analytics.</li>
-                <li><strong>📊 Real-Time Decision Support:</strong> Access up-to-date insights to make informed decisions quickly and effectively.</li>
-            </ul>
+            <div class="section">
+                <div class="text-content">
+                    <h2>Data Visualization</h2>
+                    <p>Transform your data into insightful, interactive visualizations with ease. Analytiqus offers a wide range of customizable charts and graphs to help you uncover trends and make informed decisions.</p>
+                </div>
+                <div class="video-placeholder">
+                    <video controls>
+                        <source src="img/viz_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="section">
+                <div class="text-content">
+                    <h2>Feature Engineering</h2>
+                    <p>Elevate your data preprocessing with advanced feature engineering tools. Analytiqus simplifies the creation of powerful predictive features, ensuring your machine learning models achieve optimal performance.</p>
+                </div>
+                <div class="video-placeholder">
+                    <video controls>
+                        <source src="img/FE_Demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+
+            <div class="section">
+                <div class="text-content">
+                    <h2>Machine Learning</h2>
+                    <p>Harness the power of machine learning with Analytiqus' user-friendly interface and robust algorithms. Build, train, and evaluate models seamlessly to gain deeper insights and drive smarter decisions.</p>
+                </div>
+                <div class="video-placeholder">
+                    <video controls>
+                        <source src="img/mml.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </div>
 
         <div class="video-placeholder">
-            <h2>Demo Video</h2>
+            <h2>Tutorial: End to End Machine Learning Project</h2>
             <p>Watch the demo video to see Analytiqus in action!</p>
             <video controls style="width: 100%; height: auto;">
-                <source src="analytiqus.mp4" type="video/mp4">
+                <source src="img/ml_full.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
